@@ -38,7 +38,7 @@
     "build:lib": "vue-tsc -b --declaration && vite build --mode lib",
     "type-check": "vue-tsc -b",
     "clean": "rimraf dist",
-    "release": "npm run clean && npm run build:lib"
+    "release": "pnpm clean && pnpm build:lib"
   },
   "dependencies": {
     "vue": "^3.5.24"
