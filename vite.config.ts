@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import tailwindcss from "@tailwindcss/vite";
 import { resolve } from "path";
 import dts from "unplugin-dts/vite";
 
@@ -8,7 +7,6 @@ import dts from "unplugin-dts/vite";
 export default defineConfig({
   plugins: [
     vue(),
-    tailwindcss(),
     dts({
       tsconfigPath: "./tsconfig.app.json",
       processor: "vue",
@@ -22,12 +20,13 @@ export default defineConfig({
       formats: ["es"],
       fileName: "lib",
     },
-    rollupOptions: {
+    rolldownOptions: {
       external: ["vue"],
       output: {
         globals: {
           vue: "Vue",
         },
+        minify: true,
       },
     },
   },

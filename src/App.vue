@@ -5,7 +5,7 @@ import CodeWith from './components/CodeWith.vue';
 
 <template>
   <div class="flex items-center justify-center h-4xl">
-    <CodeWith name="Liuxspro" class="pr" />
+    <CodeWith />
   </div>
 
 
